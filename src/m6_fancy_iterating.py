@@ -60,8 +60,8 @@ def main():
 #
     run_test_print_items_that_are_strings(sequence1, sequence2,
                                        sequence3, sequence4)
-#     run_test_print_items_that_are_odd_integers(sequence1, sequence2,
-#                                            sequence3, sequence4)
+    run_test_print_items_that_are_odd_integers(sequence1, sequence2,
+                                           sequence3, sequence4)
 
 
 def run_test_print_all_items_forwards(sequence1, sequence2, sequence3,
@@ -521,6 +521,10 @@ def print_items_that_are_strings(sequence):
 #   -- in this sample problem, the items that are odd integers.
 # ----------------------------------------------------------------------
 def print_items_that_are_odd_integers(sequence):
+    for k in range(len(sequence)):
+        if(type(sequence[k]) is int):
+            if ((sequence[k]) % 2 != 0):
+                print(sequence[k], 'is at index', k)
     """
     Prints the items in the given sequence that are odd integers,
     along with their positions in the sequence,
@@ -533,7 +537,7 @@ def print_items_that_are_odd_integers(sequence):
       33 is at index 5
     """
     # ------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # DONE: 9. Implement and test this function.
     #
     # IMPORTANT:  The  type  function returns  int  if its argument
     #   is an integer.  Note that   int   has NO quotes surrounding it.
