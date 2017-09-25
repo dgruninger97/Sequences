@@ -58,8 +58,8 @@ def main():
 #
     run_test_print_items_that_are_bigger_than_5()  # Uses different sequences
 #
-#     run_test_print_items_that_are_strings(sequence1, sequence2,
-#                                       sequence3, sequence4)
+    run_test_print_items_that_are_strings(sequence1, sequence2,
+                                       sequence3, sequence4)
 #     run_test_print_items_that_are_odd_integers(sequence1, sequence2,
 #                                            sequence3, sequence4)
 
@@ -487,6 +487,9 @@ def print_items_that_are_bigger_than_5(sequence):
 #   -- in this sample problem, the items that are strings.
 # ----------------------------------------------------------------------
 def print_items_that_are_strings(sequence):
+    for k in range(len(sequence)):
+        if (type(sequence[k]) is str):
+            print (sequence[k],'is at index', k)
     """
     Prints the items in the given sequence that are strings,
     along with their positions (indices) in the sequence,
@@ -499,7 +502,7 @@ def print_items_that_are_strings(sequence):
       bone is at index 4
     """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # DONE: 8. Implement and test this function.
     #
     # IMPORTANT:
     #   -- A string is, by definition, an object whose type is   str.
